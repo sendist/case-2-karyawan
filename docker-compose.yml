@@ -1,0 +1,14 @@
+services:
+  mysql:
+    container_name: karyawan-mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: karyawan
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data_karyawan:/var/lib/mysql
+
+volumes:
+  mysql_data_karyawan:
